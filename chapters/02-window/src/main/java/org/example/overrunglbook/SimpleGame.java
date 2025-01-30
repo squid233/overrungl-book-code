@@ -58,7 +58,7 @@ public class SimpleGame {
 
     private void render() {
         try (MemoryStack stack = MemoryStack.pushLocal()) {
-            gl.ClearBufferfv(GL_COLOR, 0, stack.floats(0.4f, 0.6f, 0.9f, 1.0f));
+            gl.ClearNamedFramebufferfv(0, GL_COLOR, 0, stack.floats(0.4f, 0.6f, 0.9f, 1.0f));
         }
         glfwSwapBuffers(window);
     }
